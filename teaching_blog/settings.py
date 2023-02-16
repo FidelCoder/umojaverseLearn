@@ -28,6 +28,7 @@ SECRET_KEY = '!l)42+-o1d&+jm)x)!uzbnt@rngrs0=@w@_xip@vj4jp!mil5f'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -136,3 +137,6 @@ LOGIN_URL = '/app_users/user_login'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
